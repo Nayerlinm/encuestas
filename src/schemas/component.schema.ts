@@ -3,7 +3,7 @@ import { z } from 'zod';
 export const componentSchema = z.object({
   init: z.function(),
   render: z.function(),
-  template: z.string(),
+  template: z.function(),
   data: z.record(z.any()),
 });
 
