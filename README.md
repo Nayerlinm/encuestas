@@ -1,4 +1,5 @@
 # Encuestas
+
 ---
 
 ## Instalación
@@ -17,7 +18,7 @@ npm -v
 
 #### Git
 
-Descargar [Git](https://git-scm.com/) y ejecutar el siguiente comando en cmd o powerShell: 
+Descargar [Git](https://git-scm.com/) y ejecutar el siguiente comando en cmd o powerShell:
 
 ```bash
 git -v
@@ -36,6 +37,7 @@ code -v
 Crear una cuenta en [GitHub](https://github.com/).
 
 #### Repositorio
+
 Abrir una terminal dentro de la carpeta donde queremos clonar el repositorio y ejecutar el siguiente comando:
 
 ```bash
