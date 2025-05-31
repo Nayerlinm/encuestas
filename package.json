@@ -1,18 +1,22 @@
 {
- "name": "encuestas",
- "private": true,
- "version": "0.0.0",
- "type": "module",
- "scripts": {
-  "dev": "vite",
-  "build": "tsc && vite build",
-  "preview": "vite preview",
-  "format": "prettier --write . --ignore-path .gitignore"
- },
- "devDependencies": {
-  "@types/node": "^22.15.29",
-  "prettier": "^3.5.3",
-  "typescript": "~5.8.3",
-  "vite": "^6.3.5"
- }
+  "name": "encuestas",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "format": "prettier --write . --ignore-path .gitignore"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "prettier": "^3.5.3",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.6",
+    "zod": "^3.25.42"
+  }
 }
