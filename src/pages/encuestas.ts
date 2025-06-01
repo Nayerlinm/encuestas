@@ -5,32 +5,26 @@ import { renderTemplate } from '../utils';
 export const Encuestas: TComponent = {
   template: function (this) {
     return `
+    <div class="container">
     <h1>Encuestas</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, quis. Esse velit numquam laudantium beatae ducimus facere, quod ex sapiente?</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Título</th>
-          <th>Descripción</th>
-          <th>Fecha de creación</th>
-          <th>Fecha de actualización</th>
-        </tr>
-      </thead>
-      <tbody>
+
+      <div class="row gap-2">
          ${this.data.encuestas
            .map(
              (encuesta: TEncuesta) => `
-          <tr data-id="${encuesta.id}">
-            <td>${encuesta.titulo}</td>
-            <td>${encuesta.descripcion}</td>
-            <td>${encuesta.createAt}</td>
-            <td>${encuesta.updateAt}</td>
-          </tr>
+          <div class="card col-3">
+  <div class="card-body">
+    <h5 class="card-title">${encuesta.titulo}</h5>
+    <p class="card-text">${encuesta.descripcion}</p>
+    <a href="/encuestas/${encuesta.id}" class="btn btn-primary">Ver</a>
+  </div>
+</div>
         `,
            )
            .join('')}
-      </tbody>
-    </table>
+      </div>
+      </div>
   `;
   },
   data: {
