@@ -16,6 +16,7 @@ export const Home: TComponent = {
   init: () => {
     // Lógica del componente (ej: eventos)
     document.getElementById('increment-btn')?.addEventListener('click', () => {
+      if (!Home.data) return;
       Home.data.counter++;
       Home.render?.(); // Vuelve a renderizar
     });
