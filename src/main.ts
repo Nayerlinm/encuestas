@@ -6,12 +6,14 @@ import type { TRoute } from './schemas/router.schema';
 import { Home } from './pages/home';
 import { About } from './pages/about';
 import { Encuestas } from './pages/encuestas';
+import { EncuestasId } from './pages/encuestas-id';
 
 const routes: TRoute[] = [
   { path: '/', component: Home, title: 'Home' },
   { path: '/about', component: About, title: 'About' },
   { path: '/contact', component: Home, title: 'Contact' },
   { path: '/encuestas', component: Encuestas, title: 'Encuestas' },
+  { path: '/encuestas/1', component: EncuestasId, title: 'EncuestasID' },
 ];
 
 const router = new Router(routes);
@@ -25,3 +27,4 @@ document.addEventListener('click', e => {
     if (href) router.navigateTo(href);
   }
 });
+

@@ -1,12 +1,10 @@
-!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test de Desarrollo Web</title>
-</head>
-<body>
-    <h1>Test de Desarrollo Web</h1>
+import type { TComponent } from '../schemas';
+import { renderTemplate } from '../utils';
+
+export const EncuestasId: TComponent = {
+  template: function (this) {
+    return `
+      <h1>Test de Desarrollo Web</h1>
     <section id="Test">
         <div class="contenedor-pregunta" id="0">
             <h2> 1 - ¿Que lenguaje de marcado se utiliza para estructurar el contenido de una pagina web?</h2>
@@ -50,5 +48,19 @@
              </div>     
     </section>
     <button id="corregir">corregir</button>
-</body>
-</html>
+  `;
+  },
+  data: {
+      // name: 'Usuario',
+        //counter: 0,
+  },
+  init: () => {
+    // Lógica del componente (ej: eventos)
+    document.getElementById('increment-btn')?.addEventListener('click', () => {
+      if (!EncuestasId.data) return  
+        EncuestasId.data.counter++;
+      EncuestasId.render?.(); // Vuelve a renderizar
+    });
+  },
+  render: () => renderTemplate(EncuestasId),
+};
